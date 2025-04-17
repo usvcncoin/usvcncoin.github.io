@@ -41,6 +41,29 @@
       padding: 5px 10px;
       font-size: 12px;
     }
+    .roadmap {
+      background-color: #1a1a1a;
+      padding: 2rem;
+      margin-top: 2rem;
+      border-top: 2px solid #00ffe7;
+    }
+    .roadmap h2 {
+      color: #00ffe7;
+      margin-bottom: 1rem;
+    }
+    .roadmap ul {
+      list-style: none;
+      padding: 0;
+      max-width: 600px;
+      margin: auto;
+    }
+    .roadmap li {
+      background: #222;
+      padding: 15px;
+      margin-bottom: 10px;
+      border-left: 4px solid #00ffe7;
+      text-align: left;
+    }
   </style>
 </head>
 <body>
@@ -55,7 +78,8 @@
     <br>
     <a href="https://t.me/usvcncoin" class="btn btn-custom">Join Telegram</a>
     <a href="https://bscscan.com/token/0x58037C169b5A2B74252aAAA55F8C8eF3F417adF3" class="btn btn-outline-light ms-2">View on BscScan</a>
-  </div>  <div class="section container">
+  </div>
+  <div class="section container">
     <h2>Tokenomics</h2>
     <ul>
       <li><strong>Total Supply:</strong> 1,000,000,000 USvCN</li>
@@ -63,51 +87,64 @@
       <li><strong>85%</strong> to Community Vault</li>
       <li><strong>1% Tax</strong> on each transfer (goes to founder wallet, forever fixed)</li>
     </ul>
-  </div>  <div class="section container">
+  </div>
+  <div class="section container">
     <h2>Why USvCN?</h2>
     <ul>
       <li>Symbolizes the global tension between two superpowers</li>
       <li>High meme potential and community-driven movement</li>
       <li>Fair launch with transparent distribution</li>
     </ul>
-  </div>  <div class="section container">
+  </div>
+  <div class="section container">
     <h2>Buy USvCN</h2>
     <p>Trade on PancakeSwap (soon). Add liquidity and be early!</p>
     <a href="https://pancakeswap.finance/swap" class="btn btn-custom">Go to PancakeSwap</a>
-  </div>  <div class="section container">
+  </div>
+  <div class="roadmap">
+    <h2>Roadmap</h2>
+    <ul>
+      <li><strong>Q2 2025:</strong> Launch Token, Website Live, Start Community</li>
+      <li><strong>Q3 2025:</strong> Listings on CoinMarketCap & CoinGecko, Contests & Airdrops</li>
+      <li><strong>Q4 2025:</strong> NFT Launch, Marketing Push, Apply for CEX Listings</li>
+    </ul>
+  </div>
+  <div class="section container">
     <h2>Live Holders Chart (Mock Data)</h2>
     <canvas id="holdersChart" height="100"></canvas>
-  </div>  <footer>
+  </div>
+  <footer>
     <p>USvCN Coin &copy; 2025 — Powered by Meme Culture</p>
-  </footer>  <script>
+  </footer>
+  <script>
     function copyContract() {
       const contract = document.getElementById("contract").innerText;
       navigator.clipboard.writeText(contract);
       alert("Contract copied to clipboard!");
+    }const ctx = document.getElementById('holdersChart').getContext('2d');
+const chart = new Chart(ctx, {
+  type: 'line',
+  data: {
+    labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4', 'Week 5'],
+    datasets: [{
+      label: 'Holders Over Time',
+      backgroundColor: '#00ffe7',
+      borderColor: '#00ffe7',
+      data: [50, 300, 750, 1200, 2000],
+    }]
+  },
+  options: {
+    responsive: true,
+    plugins: {
+      legend: { labels: { color: 'white' } }
+    },
+    scales: {
+      x: { ticks: { color: 'white' } },
+      y: { ticks: { color: 'white' } }
     }
+  }
+});
 
-    const ctx = document.getElementById('holdersChart').getContext('2d');
-    const chart = new Chart(ctx, {
-      type: 'line',
-      data: {
-        labels: ['Day 1', 'Day 2', 'Day 3', 'Day 4', 'Day 5'],
-        datasets: [{
-          label: 'Holders Over Time',
-          backgroundColor: '#00ffe7',
-          borderColor: '#00ffe7',
-          data: [50, 200, 400, 800, 1200],
-        }]
-      },
-      options: {
-        responsive: true,
-        plugins: {
-          legend: { labels: { color: 'white' } }
-        },
-        scales: {
-          x: { ticks: { color: 'white' } },
-          y: { ticks: { color: 'white' } }
-        }
-      }
-    });
-  </script></body>
+  </script>
+</body>
 </html>
