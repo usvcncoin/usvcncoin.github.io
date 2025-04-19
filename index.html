@@ -1,19 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>USvCN Coin</title>
-  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="icon" type="image/png" href="favicon.png"> 
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     body {
-      margin: 0;
-      background: url('background.jpeg') no-repeat center center fixed;
+      background-image: url('background.jpeg');
       background-size: cover;
-      color: #eee;
+      background-attachment: fixed;
+      background-position: center;
+      color: #fff;
       font-family: 'Segoe UI', sans-serif;
+      margin: 0;
     }
     .hero {
       text-align: center;
@@ -26,44 +27,30 @@
     }
     .section {
       padding: 2rem 1rem;
-      background: rgba(0, 0, 0, 0.6);
-    }
-    .btn-custom, .btn-outline-light {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      margin: 0.5rem auto;
-      width: 80%;
-      max-width: 300px;
-      font-size: 1rem;
-      padding: 10px;
-      text-decoration: none;
-      border-radius: 5px;
     }
     .btn-custom {
       background-color: #e63946;
       border: none;
       color: white;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
     }
     .btn-custom:hover {
       background-color: #d62828;
     }
-    .btn-outline-light {
-      border: 1px solid #eee;
-      color: #eee;
-      background: transparent;
-    }
-    .btn-outline-light:hover {
-      background: #444;
+    footer {
+      padding: 1rem;
+      background: #111;
+      text-align: center;
     }
     .copy-btn {
-      margin-top: 0.5rem;
+      margin-left: 10px;
       padding: 5px 10px;
       font-size: 12px;
     }
     .roadmap {
-      background-color: rgba(0, 0, 0, 0.7);
       padding: 2rem;
       margin-top: 2rem;
       border-top: 2px solid #00ffe7;
@@ -79,16 +66,31 @@
       margin: auto;
     }
     .roadmap li {
-      background: #222;
+      background: rgba(0,0,0,0.3);
       padding: 15px;
       margin-bottom: 10px;
       border-left: 4px solid #00ffe7;
       text-align: left;
     }
-    footer {
-      padding: 1rem;
-      background: #111;
-      text-align: center;
+    .link-button {
+      display: block;
+      width: 90%;
+      max-width: 300px;
+      margin: 10px auto;
+      padding: 12px;
+      background: #000000a4;
+      border: 1px solid #999;
+      border-radius: 8px;
+      color: white;
+      text-decoration: none;
+      text-align: left;
+      font-size: 16px;
+    }
+    .link-button i {
+      margin-right: 10px;
+    }
+    .link-button:hover {
+      background-color: #222;
     }
   </style>
 </head>
@@ -101,12 +103,12 @@
       <code id="contract">0x58037C169b5A2B74252aAAA55F8C8eF3F417adF3</code>
       <button class="btn btn-sm btn-outline-light copy-btn" onclick="copyContract()">Copy</button>
     </div>
-    <a href="https://t.me/usvcncoin" class="btn-custom"><i class="fa-brands fa-telegram"></i>Join Telegram</a>
-    <a href="https://bscscan.com/token/0x58037C169b5A2B74252aAAA55F8C8eF3F417adF3" class="btn-outline-light"><i class="fa-solid fa-magnifying-glass"></i>View on BscScan</a>
-    <a href="https://x.com/USvCN?s=09" class="btn-outline-light"><i class="fa-brands fa-twitter"></i>Twitter</a>
-    <a href="USvCN_Whitepaper_2025_FINAL.pdf" class="btn-outline-light"><i class="fa-solid fa-file-lines"></i>Whitepaper</a>
+    <br>
+    <a class="link-button" href="https://t.me/usvcncoin"><i class="fab fa-telegram"></i>Join Telegram</a>
+    <a class="link-button" href="https://bscscan.com/token/0x58037C169b5A2B74252aAAA55F8C8eF3F417adF3"><i class="fas fa-search"></i>View on BscScan</a>
+    <a class="link-button" href="https://x.com/USvCN?s=09"><i class="fab fa-twitter"></i>Twitter</a>
+    <a class="link-button" href="USvCN_Whitepaper_2025_FINAL.pdf"><i class="fas fa-file"></i>Whitepaper</a>
   </div>
-
   <div class="section container">
     <h2>Tokenomics</h2>
     <ul>
@@ -117,7 +119,6 @@
       <li><strong>No further minting or emission schedule</strong></li>
     </ul>
   </div>
-
   <div class="section container">
     <h2>Why USvCN?</h2>
     <ul>
@@ -126,13 +127,11 @@
       <li>Fair launch with transparent distribution</li>
     </ul>
   </div>
-
   <div class="section container">
     <h2>Buy USvCN</h2>
     <p>Trade on PancakeSwap now and join the revolution early!</p>
     <a href="https://pancakeswap.finance/swap?outputCurrency=0x58037C169b5A2B74252aAAA55F8C8eF3F417adF3" class="btn btn-custom">Buy on PancakeSwap</a>
   </div>
-
   <div class="roadmap">
     <h2>Roadmap</h2>
     <ul>
@@ -145,23 +144,19 @@
       <li><strong>Q4 2026:</strong> Expansion into Metaverse + Full DAO Launch</li>
     </ul>
   </div>
-
   <div class="section container">
     <h2>Live Holders Chart (Mock Data)</h2>
     <canvas id="holdersChart" height="100"></canvas>
   </div>
-
   <footer>
     <p>USvCN Coin &copy; 2025 — Powered by Meme Culture</p>
   </footer>
-
   <script>
     function copyContract() {
       const contract = document.getElementById("contract").innerText;
       navigator.clipboard.writeText(contract);
       alert("Contract copied to clipboard!");
     }
-
     const ctx = document.getElementById('holdersChart').getContext('2d');
     const chart = new Chart(ctx, {
       type: 'line',
